@@ -63,6 +63,7 @@ def predict(image):
     scores = scores.numpy()
     image_class = class_names[np.argmax(scores)]
     result = "The image uploaded is {}".format(image_class)
+    result = f"{class_names[np.argmax(scores)]} with a { (100 * np.max(scores)).round(2) } % confidence."
     return result
 
     
