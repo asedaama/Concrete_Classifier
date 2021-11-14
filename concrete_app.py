@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  6 00:17:56 2021
-
-@author: antwi
-"""
 import streamlit as st
 from PIL import Image,ImageOps
 import matplotlib.pyplot as plt
