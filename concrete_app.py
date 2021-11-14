@@ -20,7 +20,7 @@ import h5py
 fig = plt.figure()
 
 
-#with open("custom.css") as f:
+with open("custom.css") as f:
     #st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title('Concrete Classifier')
@@ -52,7 +52,8 @@ def main():
 
 def predict(image):
     #classifier_model = tf.keras.models.load_model(r'/C:/Users/antwi/Downloads/my_mode.h5')
-    classifier_model = "C:/Users/antwi/Downloads/my_mode.h5"
+    #classifier_model = "C:/Users/antwi/Downloads/my_mode.h5"
+    classifier_model = "modeltrans_dir.h5"
     IMAGE_SHAPE = (224, 224,3)
     model = load_model(classifier_model, compile=False, custom_objects={'KerasLayer': hub.KerasLayer})
     test_image = image.resize((224,224))
